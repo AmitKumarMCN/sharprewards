@@ -949,22 +949,25 @@ body {
 
 /* Footer Section */
 .footer {
-  background: #0f172a;
-  color: #94a3b8;
-  padding: 40px 0;
-  font-size: 14px;
+  background: linear-gradient(145deg, #0a0f1f, #1a1a2e);
+  color: #A0A3B1;
+  padding: 60px 20px;
+  font-family: 'Syne', sans-serif;
 }
 
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  color: #d3d5dd;
 }
 
 .footer-column {
@@ -972,10 +975,10 @@ body {
 }
 
 .footer-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 15px;
+  color: #00ffff;
 }
 
 .footer-column ul {
@@ -990,39 +993,72 @@ body {
 .footer-column ul li a {
   color: #d3d5dd;
   text-decoration: none;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #3b82f6;
+  color: #00ffff;
 }
 
-.social-icons {
+.footer-social-icons{
   display: flex;
-  gap: 10px;
+  gap: 1rem;
   margin-top: 15px;
 }
 
-.social-icons a {
+.footer-social-icons a {
   color: #A0A3B1;
-  font-size: 18px;
-  transition: color 0.3s ease;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #3b82f6;
+.footer-social-icons a:hover {
+  color: #00ffff;
+  transform: scale(1.1);
 }
-
+.footer-links{
+  display: flex;
+  gap: 1rem;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid #1e293b;
-  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #cccccc;
 }
 
 .footer-bottom p {
   margin: 5px 0;
-  color: #64748b;
+}
+
+.footer-bottom p a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.footer-bottom p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1093,3 +1129,4 @@ body {
     flex-direction: column;
   }
 }
+
